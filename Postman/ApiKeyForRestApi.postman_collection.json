@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "98e6caa5-0eff-49d6-bb54-7e46c49431af",
+		"name": "ApiKeyForRestApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23574959"
+	},
+	"item": [
+		{
+			"name": "Missing API Key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7041/api/v1/weather-forcast",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7041",
+					"path": [
+						"api",
+						"v1",
+						"weather-forcast"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incorrect API Key Value",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "XApiKey",
+						"value": "garbage",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7041/api/v1/weather-forcast",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7041",
+					"path": [
+						"api",
+						"v1",
+						"weather-forcast"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Correct API Key Value",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "XApiKey",
+						"value": "pgH7QzFHJx4w46fI~5Uzi4RvtTwlEXp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7041/api/v1/weather-forcast",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7041",
+					"path": [
+						"api",
+						"v1",
+						"weather-forcast"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
